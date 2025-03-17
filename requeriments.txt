@@ -6,3 +6,4 @@ pymysql
 openai
 starlette
 uvicorn
+python-dotenv
