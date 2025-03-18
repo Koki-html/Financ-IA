@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine
-import os
+from dotenv import dotenv_values
 
 # Conexión a la base de datos con SQLAlchemy e importando variables de .env
-DBURL = os.getenv("URL")
+config = dotenv_values(".env")
+DBURL = config["URL"]
 engine = create_engine(DBURL)
