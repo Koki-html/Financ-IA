@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from Src.connector.deepseek_conector import client
+from Src.connector.deepseek_conector import get_deepseek_response
 
 router = APIRouter()
 
@@ -10,12 +10,8 @@ async def deepseek_chat(user_message: str):
     :param user_message: Mensaje enviado por el usuario.
     :return: Respuesta generada por el modelo.
     """
-    response = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant"},
-            {"role": "user", "content": user_message},
-        ],
-        stream=False
-    )
-    return {"response": response.choices[0].message.content}
+    try:
+        response = get_deepseek_response(user_message)
+        return {"response": response}
+    except Exception as e:
+        return {"error": str(e)}
