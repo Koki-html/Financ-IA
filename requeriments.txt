@@ -1,8 +1,0 @@
-fastapi
-sqlalchemy
-requests
-pydantic
-pymysql
-openai
-starlette
-uvicorn
