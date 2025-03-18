@@ -38,12 +38,13 @@ Asegúrate de tener instalado lo siguiente:
    python -m venv venv
    source venv/bin/activate  # En Windows usa: venv\Scripts\activate
    ```
-4. **Instala las dependencias:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-5. **Configura las variables de entorno:**
+4. **Configura las variables de entorno:**
    - Crea un archivo `.env` basado en `.envExample` y personalízalo según tus necesidades.
+
+5. **Iniciar el proyecto:**
+   ```bash
+   uvicorn main:app --reload
+   ```
 
 ---
 
