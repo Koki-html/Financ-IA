@@ -1,13 +1,17 @@
-from Src.models.dbmodels import User, engine, initialize_db
+#ejemplo de query para más adelante
+from Src.models.dbmodels import User, engine
 from sqlalchemy import select
 
+#conexión con la DB
 conexion = engine.connect()
 
-initialize_db()
+#Generación de query
 stmt = select(User)
 
 data = conexion.execute(stmt)
 
-print(data)
+#Impresión de resultados
+for row in data:
+    print(row)
 
 conexion.close()
