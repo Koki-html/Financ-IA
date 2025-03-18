@@ -6,6 +6,3 @@ pymysql
 openai
 starlette
 uvicorn
-python-dotenv
-mysql-connector-python
-dotenv
