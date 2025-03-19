@@ -1,4 +1,4 @@
-from connector.database import engine
+from Src.connector.database import engine
 from sqlalchemy import String, Integer, BINARY, Boolean, Date, Double
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import mapped_column
