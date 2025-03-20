@@ -44,3 +44,15 @@ class Messages(BaseModel):
     message: str
     creation_date: datetime
     ia_response: bool
+
+#class for Updates
+
+class UserUpdate(BaseModel):
+    id: Optional[bytes] = None
+    run: Optional[str] = None
+    name: Optional[str] = None
+    last_name: Optional[str] = None
+    password: Optional[str] = None
+    email: Optional[str] = None
+    phone: Optional[str] = None
+    birthdate: Optional[date] = None

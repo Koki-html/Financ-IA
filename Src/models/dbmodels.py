@@ -7,13 +7,13 @@ from sqlalchemy.orm import mapped_column
 class User(Base):
     __tablename__ = 'users'
 
-    id = mapped_column(BINARY(16), primary_key=True, default=lambda: uuid.uuid4().bytes)
-    run = mapped_column(String)
-    name = mapped_column(String)
-    last_name = mapped_column(String)
-    password = mapped_column(String)
-    email = mapped_column(String)
-    phone = mapped_column(String)
+    id = mapped_column(BINARY(16), primary_key=True)
+    run = mapped_column(String(50))
+    name = mapped_column(String(100))
+    last_name = mapped_column(String(100))
+    password = mapped_column(String(255))
+    email = mapped_column(String(255))
+    phone = mapped_column(String(20))
     birthdate = mapped_column(Date)
 
 class Reports(Base):
