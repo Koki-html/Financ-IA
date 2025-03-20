@@ -1,0 +1,1 @@
+URL = mysql+pymysql://User:Password@localhost/NameDatabase
