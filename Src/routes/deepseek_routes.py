@@ -3,8 +3,6 @@ from pydantic import BaseModel
 from Src.connector.deepseek_conector import get_deepseek_response
 
 router = APIRouter()
-
-# Modelo de entrada
 class UserMessage(BaseModel):
     user_message: str
 

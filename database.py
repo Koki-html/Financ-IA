@@ -5,3 +5,4 @@ from dotenv import dotenv_values
 config = dotenv_values(".env")
 DBURL = config["URL"]
 engine = create_engine(DBURL)
+print("Conexión a la base de datos exitosa")
