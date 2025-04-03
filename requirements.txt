@@ -9,3 +9,4 @@ uvicorn
 python-dotenv
 mysql-connector-python
 dotenv
+cryptography

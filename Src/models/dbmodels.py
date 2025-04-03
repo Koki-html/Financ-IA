@@ -23,7 +23,7 @@ class Reports(Base):
     report = mapped_column(String)
     creation_date = mapped_column(Date)
 
-class Debs(Base):
+class Debts(Base):
     __tablename__ = 'debs'
     id = mapped_column(BINARY, primary_key=True)
     user_id = mapped_column(BINARY)
